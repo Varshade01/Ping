@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/intouch_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/join_or_create_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/poppins"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="13.5dp"
+        android:text="@string/join_or_create_a_group_bottomsheet"
+        android:textColor="@color/intouch_primary_01"
+        android:textSize="14sp" />
+
+</LinearLayout>

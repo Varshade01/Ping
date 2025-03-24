@@ -1,0 +1,12 @@
+package com.khrd.pingapp.homescreen.states
+
+import com.khrd.pingapp.data.pings.DatabasePing
+
+
+interface IRescheduleExpiredRecurringPingsState
+
+sealed class RescheduleExpiredRecurringPingsState: IRescheduleExpiredRecurringPingsState
+
+data class RescheduleExpiredRecurringPingsStateSuccess(val databasePing: DatabasePing):RescheduleExpiredRecurringPingsState()
+
+class RescheduleExpiredRecurringPingsStateFailure():RescheduleExpiredRecurringPingsState()

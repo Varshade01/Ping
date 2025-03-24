@@ -1,0 +1,348 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "d0233ae8adcfd25ab80f3387d1bce6a1",
+    "entities": [
+      {
+        "tableName": "Group_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT, `invitationLink` TEXT, `imageUrl` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "invitationLink",
+            "columnName": "invitationLink",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "imageUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "users",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`userId` TEXT NOT NULL, `userEmail` TEXT, `userName` TEXT, `groups` TEXT, `job` TEXT, `photoURL` TEXT, `fcmTokens` TEXT, `isDeleted` INTEGER, `mutedItems` TEXT, `isHide` INTEGER, PRIMARY KEY(`userId`))",
+        "fields": [
+          {
+            "fieldPath": "userId",
+            "columnName": "userId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userEmail",
+            "columnName": "userEmail",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userName",
+            "columnName": "userName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "groups",
+            "columnName": "groups",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "job",
+            "columnName": "job",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "photoURL",
+            "columnName": "photoURL",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fcmTokens",
+            "columnName": "fcmTokens",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isDeleted",
+            "columnName": "isDeleted",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mutedItems",
+            "columnName": "mutedItems",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isHide",
+            "columnName": "isHide",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "userId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ReceivedPings_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`receivedPingEntityId` TEXT NOT NULL, `timestamp` INTEGER, `from` TEXT NOT NULL, `receivers` TEXT NOT NULL, `message` TEXT NOT NULL, `views` TEXT NOT NULL, `groupId` TEXT, `scheduledTime` INTEGER, `groupFrom` TEXT NOT NULL, `recurringTime` TEXT NOT NULL, PRIMARY KEY(`receivedPingEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "receivedPingEntityId",
+            "columnName": "receivedPingEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "from",
+            "columnName": "from",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "receivers",
+            "columnName": "receivers",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "message",
+            "columnName": "message",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "views",
+            "columnName": "views",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groupId",
+            "columnName": "groupId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "scheduledTime",
+            "columnName": "scheduledTime",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "groupFrom",
+            "columnName": "groupFrom",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurringTime",
+            "columnName": "recurringTime",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "receivedPingEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "SentPings_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`sentPingEntityId` TEXT NOT NULL, `timestamp` INTEGER, `from` TEXT NOT NULL, `receivers` TEXT NOT NULL, `message` TEXT NOT NULL, `views` TEXT NOT NULL, `groupId` TEXT, `scheduledTime` INTEGER, `groupFrom` TEXT NOT NULL, `recurringTime` TEXT NOT NULL, PRIMARY KEY(`sentPingEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "sentPingEntityId",
+            "columnName": "sentPingEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "from",
+            "columnName": "from",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "receivers",
+            "columnName": "receivers",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "message",
+            "columnName": "message",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "views",
+            "columnName": "views",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groupId",
+            "columnName": "groupId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "scheduledTime",
+            "columnName": "scheduledTime",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "groupFrom",
+            "columnName": "groupFrom",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurringTime",
+            "columnName": "recurringTime",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "sentPingEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ScheduledPings_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`scheduledPingEntityId` TEXT NOT NULL, `timestamp` INTEGER, `from` TEXT NOT NULL, `receivers` TEXT NOT NULL, `message` TEXT NOT NULL, `views` TEXT NOT NULL, `groupId` TEXT, `scheduledTime` INTEGER, `groupFrom` TEXT NOT NULL, `recurringTime` TEXT NOT NULL, PRIMARY KEY(`scheduledPingEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "scheduledPingEntityId",
+            "columnName": "scheduledPingEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "from",
+            "columnName": "from",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "receivers",
+            "columnName": "receivers",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "message",
+            "columnName": "message",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "views",
+            "columnName": "views",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groupId",
+            "columnName": "groupId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "scheduledTime",
+            "columnName": "scheduledTime",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "groupFrom",
+            "columnName": "groupFrom",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recurringTime",
+            "columnName": "recurringTime",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "scheduledPingEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd0233ae8adcfd25ab80f3387d1bce6a1')"
+    ]
+  }
+}

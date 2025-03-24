@@ -1,0 +1,322 @@
+<resources>
+    <string name="app_name" translatable="false">InTouch App</string>
+
+    <string name="facebook_app_id" translatable="false">1196617070905586</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1196617070905586</string>
+    <string name="facebook_client_token" translatable="false">272e06fd5656fa8e3735d0020f2ac180</string>
+
+    <!--GENERAL-->
+    <string name="hello">Hello</string>
+    <string name="login">Log in</string>
+    <string name="logout">Log out</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="fullname">Full Name</string>
+    <string name="surname">Surname</string>
+    <string name="start">Start</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="done">Done</string>
+    <string name="join">Join</string>
+    <string name="ping">Ping</string>
+    <string name="intouch">InTouch</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="copy_link">Copy link</string>
+    <string name="leave">Leave</string>
+    <string name="group">Group</string>
+    <string name="cancel">Cancel</string>
+    <string name="name">Name</string>
+    <string name="delete">Delete</string>
+    <string name="received">Received</string>
+    <string name="sent">Sent</string>
+    <string name="scheduled">Scheduled</string>
+    <string name="change">Change</string>
+    <string name="warning">Warning</string>
+    <string name="attention">Attention</string>
+    <string name="pings">Pings</string>
+    <string name="unknown">Unknown</string>
+    <string name="deleted_user">Deleted User</string>
+    <string name="deleted_group">Deleted Group</string>
+    <string name="great">Great!</string>
+    <string name="scheduled_tittle">Scheduled!</string>
+    <string name="sending_ping_title">Sending Ping</string>
+    <string name="syncing_pings_title">Syncing Pings</string>
+    <string name="success">Success!</string>
+    <string name="clear">clear</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="group_settings">Group settings</string>
+    <string name="join_or_create_a_group">Join or create a group</string>
+    <string name="create">Create</string>
+    <string name="intouch_logo" translatable="false">InTouch logo</string>
+    <string name="group_ping_status">Group ping status</string>
+    <string name="seen_ping_status_text">SEEN</string>
+    <string name="schedule_ping">Schedule ping</string>
+    <string name="schedule">schedule</string>
+    <string name="add_emoji">Add emoji</string>
+    <string name="delete_emoji">Delete emoji</string>
+    <string name="send">Send</string>
+    <string name="receiver">Receiver</string>
+    <string name="intouch_app" translatable="false">InTouch App</string>
+    <string name="new_ping_channel_name">New pings</string>
+    <string name="channel_scheduled_name">Scheduled pings</string>
+    <string name="syncing_pings_channel_name">Syncing new pings</string>
+    <string name="new_ping" translatable="false">new_ping</string>
+    <string name="new_ping_channel_id" translatable="false">show_New_Ping_Notification</string>
+    <string name="schedule_channel_id" translatable="false">create_Schedule_Ping_Notification</string>
+    <string name="syncing_pings_channel_id" translatable="false">syncing_pings_channel_id</string>
+    <string name="change_password">Change password</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="ok">OK</string>
+    <string name="send_ping">Send ping</string>
+    <string name="change_email">Change email</string>
+    <string name="new_email">New email</string>
+    <string name="change_email_header">Attention</string>
+    <string name="user_photo">User photo</string>
+    <string name="group_photo">Group photo</string>
+    <string name="register_new_account">Register new account</string>
+    <string name="leave_the_group">Leave the group</string>
+    <string name="send_ping_to_user">Send ping to user</string>
+    <string name="send_ping_to_group">Send ping to group</string>
+    <string name="join_group_edit_text_hint">Invitation link</string>
+    <string name="create_group_hint">Group name</string>
+    <string name="create_new_group_header">Create a new group</string>
+    <string name="delete_photo">Delete photo</string>
+
+    <!--LOGIN-->
+    <string name="forgot_password">Forgot password?</string>
+    <string name="already_registered">Already registered?</string>
+    <string name="login_description">Please log in to start using the app</string>
+
+    <!--RESET PASSWORD-->
+    <string name="reset_password_email_helper">Please provide the email you used to register</string>
+
+    <!--RENAME GROUP-->
+    <string name="rename_group_rename_current_group">Rename current group</string>
+    <string name="rename_group_enter_group_name">Enter group name</string>
+    <string name="rename_group_hint">Current group name</string>
+
+    <!--JOIN GROUP-->
+    <string name="join_another_group_dialog_title">Join another group</string>
+    <string name="join_another_group_dialog_message">Are you sure that you want to join </string>
+    <string name="join_another_group_dialog_group_word">group?</string>
+    <string name="join_group_already_being_there_error">You are already in this group</string>
+
+    <!--PROFILE -->
+    <string name="upload_change_photo">Upload/change photo</string>
+    <string name="delete_my_account">Delete my account</string>
+    <string name="job_position">Job position</string>
+    <string name="your_job_position">Your job position</string>
+    <string name="delete_account">Delete account</string>
+    <string name="image_upload_success">Photo uploaded successfully</string>
+    <string name="image_upload_fail">Failed to upload photo</string>
+    <string name="photo_delete_success">Photo deleted successfully</string>
+    <string name="photo_delete_fail">Failed to delete photo</string>
+
+    <!--PING-->
+    <string name="to_double_dot">To:</string>
+    <string name="sent_double_dot">Sent:</string>
+    <string name="scheduled_double_dot">SCHEDULED:</string>
+    <string name="group_ping">Group ping</string>
+    <string name="load_received_pings_failure">Failed to load received pings</string>
+    <string name="no_received_pings">You haven’t received any pings yet</string>
+    <string name="new_ping_from">New Ping from</string>
+    <string name="repeat_double_dot">REPEAT:</string>
+    <string name="recurring_ping_message_daily">Will be sent on %1$s</string>
+    <string name="repeat_daily_details">Every day at %1$s:%2$s</string>
+    <string name="repeat_weekly_details">%1$s at %2$s:%3$s</string>
+    <string name="repeat_monthly_details">The %1$sth day of each month at %2$s:%3$s</string>
+    <string name="repeat_yearly_details">Every year on %1$s %2$sth at %3$s:%4$s</string>
+
+
+    <!--AlertDialog -->
+    <string name="to_log_back_in">To log back in you will need to re-enter your email and password</string>
+    <string name="check_your_inbox">Check your inbox!</string>
+    <string name="password_reset_link">A password reset link was sent to the email you specified</string>
+    <string name="success_star">Success star</string>
+    <string name="are_you_sure_you_want_to_delete_photo">Are you sure you want to delete your profile photo?</string>
+
+    <!--MESSAGES-->
+    <string name="invalid_login_credentials">Entered email/password is invalid</string>
+    <string name="invalid_email">Please enter the email in the valid format (e.g. mail@example.com)</string>
+    <string name="invalid_password">Invalid password.</string>
+    <string name="invalid_join_link_error">Please, enter a valid invitation link</string>
+    <string name="verify_email_message">Please, verify your email</string>
+    <string name="invalid_user_email">Invalid email, such user does not exist</string>
+    <string name="too_many_requests">Too many requests, try again later</string>
+    <string name="empty_field">Please fill out this field</string>
+    <string name="no_receiver_selected">Please select a receiver from suggestions.</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="no_google_account_found_error">No Google Accounts found</string>
+    <string name="failed_to_sign_in_via_google">Failed to SignInViaGoogle: IdToken is empty</string>
+    <string name="join_group_bring_already_in_error">You are already in this group</string>
+    <string name="rename_group_fail">Failed to rename the group</string>
+    <string name="job_position_updated">Job position updated successfully</string>
+    <string name="job_position_too_long">Job name should be 64 characters or less</string>
+    <string name="job_position_invalid_chars">Please use letters or space</string>
+    <string name="job_position_fail">Failed to set job position</string>
+    <string name="hide_user_info_fail">Failed to hide your info</string>
+    <string name="select_source">Select source</string>
+    <string name="delete_account_message">All your data will be erased.\nThis cannot be undone.\nPlease enter your current password to confirm this action</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_password_screen_title">Restore password</string>
+    <string name="reset_password_success_message">Reset link has been sent to your email.</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="confirm_email_message">To continue with the app please check your email inbox for a confirmation link</string>
+    <string name="email_confirmed">Email confirmed</string>
+    <string name="send_verification_link">Send verification again</string>
+    <string name="enter_name">Please fill in your name</string>
+    <string name="name_validation_message">Please use letters, numbers, -, \' or space</string>
+    <string name="enter_surname">Enter surname</string>
+    <string name="surname_validation_message">Enter valid surname</string>
+    <string name="enter_email">Enter email</string>
+    <string name="email_validation_message">Please enter your email in the valid format (e.g. mail@example.com)</string>
+    <string name="enter_password">Enter password</string>
+    <string name="email_confirmed_successfully">Email has been confirmed</string>
+    <string name="confirm_email_send">Confirmation email has been sent</string>
+    <string name="permission_to_manage_personal_data">I explicitly consent to InTouch App collecting and processing user data specified above</string>
+    <string name="create_new_group_message">Add a group name and send invitation links <br />to group members</string>
+    <string name="create_group_name_too_long_message">Group name should be 64 characters or less</string>
+    <string name="create_group_name_invalid_symbols">Please, enter a valid group name</string>
+    <string name="join_group_message">If you have an invitation link, paste it below.\nYou can be a member of only one group at a time</string>
+    <string name="join_group_header">Join an existing group</string>
+    <string name="join_unexisting_group_error">Such group does not exist</string>
+    <string name="leave_dialog_message">To join this group again you will need an invitation link. </string>
+    <string name="creating_group_fail">Failed to create new group</string>
+    <string name="generating_group_fail">Failed to generate group link</string>
+    <string name="join_successful">Joined successfully</string>
+    <string name="copy_invitation_link">Link copied!</string>
+    <string name="lets_invite_others">Let\'s invite others!</string>
+    <string name="update_name_successful">Name updated successfully.</string>
+    <string name="leave_group_success_message">You have successfully left the group</string>
+    <string name="leave_group_failure_message">Failed to leave the group</string>
+    <string name="mute_group_failure_message">Failed to mute the group</string>
+    <string name="name_length_error_message">Name should be less than 32 characters</string>
+    <string name="successfully_registered">Successfully Registered</string>
+    <string name="registration_unknown_issue">Registration failed with unknown issue</string>
+    <string name="user_already_registered">Failed: this user is completely registered</string>
+    <string name="email_already_in_use">This email is already used</string>
+    <string name="tip_to_start_using_app">Please register to start using the app</string>
+    <string name="password_too_short">Password should be minimum 8 characters long</string>
+    <string name="password_digit_validation_message">Password should contain at least 1 digit</string>
+    <string name="password_capital_letter_validation_message">Password should contain at least 1 capital letter</string>
+    <string name="password_small_letter_validation_message">Password should contain at least 1 small letter</string>
+    <string name="confirm_password_validation_message">Entered symbols do not match your password</string>
+    <string name="email_not_confirmed">Email isn`t confirmed</string>
+    <string name="change_email_message">After you’ve changed the email, you will be temporarily locked out of your account till you verify your new email</string>
+    <string name="change_email_dialog_header">Email double-check</string>
+    <string name="change_email_dialog_message">The verification link will be sent to:\n</string>
+    <string name="same_email_error">Old Email and New Email can\'t be the same</string>
+    <string name="password_instruction">Password should have at least 8 characters \n(32 characters max): min 1 uppercase +\n min 1 lowercase + min 1 number</string>
+    <string name="current_password_doesnt_match">Entered symbols do not match your password</string>
+    <string name="password_too_long">Password should be maximum 32 characters long</string>
+    <string name="action_confirmation">Please enter your current password to confirm this action</string>
+    <string name="new_password_same_as_current">Old password and new password can`t be the same</string>
+    <string name="password_changed_successful">Your password was changed</string>
+    <string name="send_to_everyone_in_group">Send to everyone in group</string>
+    <string name="ping_sent_message">Ping has been sent</string>
+    <string name="input_is_more_than_max">The input is more than max</string>
+    <string name="symbols_outside_pattern">The input uses symbols outside the pattern</string>
+    <string name="input_outside_min_and_max">Input is outside the min and max chars.</string>
+    <string name="fillout_the_field">Please fill out the field</string>
+    <string name="passwords_are_same">Please enter a password that is not used.</string>
+    <string name="please_give_your_consent_to_data_processing_to_continue">Please give your consent to data processing to continue</string>
+    <string name="ping_cancelling_failed">Ping canceling failed</string>
+    <string name="failed_to_load_sent_pings">Failed to load sent pings</string>
+    <string name="failed_to_load_scheduled_pings">Failed to load scheduled pings</string>
+    <string name="description_syncing_channel">Syncing pings</string>
+    <string name="description_scheduled_channel">Push notifications with scheduled pings</string>
+    <string name="ping_creation_failed">Ping creation failed</string>
+    <string name="scheduled_for_past_time_error">Cannot schedule for past time</string>
+    <string name="visible_to_users">Will be visible to other users</string>
+    <string name="send_verification_link_to_email">We will send a verification link to it</string>
+    <string name="password_validation_rules">Min 8 characters long, uppercase+lowercase+numbers</string>
+    <string name="double_check_message">Please double-check it for typos</string>
+    <string name="empty_group_screen">Join a group with a link or create a new one to send pings to someone</string>
+    <string name="empty_group_message">You can always invite others to join.\nTap the group avatar, copy the invitation link and send it to the people you want.</string>
+    <string name="you_haven_t_scheduled_any_pings_yet">You haven\'t scheduled any pings yet</string>
+    <string name="you_haven_t_sent_any_pings_yet">You haven\'t sent any pings yet</string>
+    <string name="please_provide_a_valid_password">Please provide a valid password.</string>
+    <string name="ping_sent_successfully">Ping sent successfully!</string>
+    <string name="ping_send_offline_message">Will be sent when network connectivity is restored</string>
+    <string name="job_position_online_update">Job position will be updated when network connection is restored</string>
+    <string name="change_name_offline_message">Name will be updated when internet connection is restored</string>
+    <string name="update_name_offline">Name will be updated when internet connection is restored</string>
+    <string name="leave_group_offline_message">You will leave the group when internet connection is restored</string>
+    <string name="cancel_ping_offline">Scheduled ping will be canceled when internet connection is restored</string>
+    <string name="please_provide_a_valid_email">Please provide the valid email address</string>
+    <string name="schedule_ping_message">Will be sent on %1$s</string>
+    <string name="schedule_recurring_ping_message">Will be sent on %1$s\nRepeat: %2$s</string>
+    <string name="schedule_recurring_ping_date">%1$s, %2$s</string>
+    <string name="join_or_create_a_group_bottomsheet">JOIN OR CREATE A GROUP</string>
+    <string name="status_active_group">Active</string>
+    <string name="searchView_hint">Enter a person name or surname</string>
+    <string name="search">Search</string>
+    <string name="join_or_create_group_toast">Join OR CREATE A GROUP</string>
+    <string name="no_user_found">No user found</string>
+    <string name="search_in_all_groups_text_view">Search in all groups</string>
+    <string name="share_invitation_link">SHARE INVITATION LINK</string>
+    <string name="share_invitation_link_dialog_message">Share invitation link to..</string>
+    <string name="from_group">From Group</string>
+    <string name="repeat_ping">Repeat Ping</string>
+    <string name="sent_to">Sent to:</string>
+    <string name="update_image_offline_message">Image will be updated when network connection would be restored</string>
+    <string name="image_wasnt_loaded_message">Image wasn\'t uploaded</string>
+    <string name="date_picker_title">Select date</string>
+    <string name="current_pass_placeholder_message">Type your current password</string>
+    <string name="new_pass_placeholder_message">Type your new password</string>
+    <string name="toolbar_icon_content_description">Arrow Back</string>
+    <string name="arrow_down_icon_content_description">Arrow Back</string>
+    <string name="password_visibility_content_description">Password visibility</string>
+    <string name="change_language">Change Language</string>
+    <string name="language_english">English</string>
+    <string name="language_ukrainian">Ukrainian</string>
+    <string name="interface_language">Interface Language</string>
+    <string name="currentLocale">English</string>
+    <string name="locale_selected">Selected</string>
+    <string name="user_name_updated">User name updated successfully</string>
+    <string name="user_online_status">userOnlineStatus</string>
+    <string name="last_seen_3_minutes_ago">Last seen 3 minutes ago</string>
+    <string name="last_seen">Last seen:</string>
+    <string name="user_muted_status">User muted status</string>
+    <string name="mute_text" translatable="false">Mute</string>
+    <string name="unmute_text" translatable="false">Unmute</string>
+    <string name="user_with_this_email_already_exists">User with this email already exists</string>
+    <string name="mute_user">Mute User</string>
+    <string name="unmute_user">Unmute User</string>
+    <string name="online">Online</string>
+    <string name="common_groups">Common Groups:</string>
+    <string name="user_is_muted">User is muted</string>
+    <string name="user_is_unmuted">User is unmuted</string>
+    <string name="mute_group">Notification off</string>
+    <string name="muted_group">Notification turn off</string>
+    <string name="unmute_group">Notification on</string>
+    <string name="unmuted_group">Notification turn on</string>
+    <string name="group_is_muted">Notification off</string>
+    <string name="group_is_unmuted">Notification on</string>
+    <string name="hide_online_status_and_group_list">Hide my online status and my group list</string>
+    <string name="recently">Recently</string>
+    <string name="sent_ping_online_status">sent_ping_online_status</string>
+    <string name="gradient_shape">gradient_shape</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="group_name" translatable="false">group name</string>
+    <string name="group_avatar" translatable="false">group_avatar</string>
+    <string name="selected">Selected</string>
+    <string name="every_monday">Every Monday</string>
+    <string name="every_tuesday">Every Tuesday</string>
+    <string name="every_wednesday">Every Wednesday</string>
+    <string name="every_thursday">Every Thursday</string>
+    <string name="every_friday">Every Friday</string>
+    <string name="every_saturday">Every Saturday</string>
+    <string name="every_sunday">Every Sunday</string>
+    <string name="no_repeat">No Repeat</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+
+
+</resources>

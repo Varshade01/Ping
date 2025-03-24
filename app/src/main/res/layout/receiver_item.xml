@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/intouch_primary_04">
+
+    <ImageView
+        android:id="@+id/iv_profile_picture"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_default_user_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/receiver_item_inner_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="12sp"
+            tools:text="Name Surname" />
+
+        <TextView
+            android:id="@+id/tv_job_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:letterSpacing="0.03"
+            android:textColor="@color/intouch_primary_02"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            tools:text="@string/job_position"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+</LinearLayout>

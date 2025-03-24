@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/intouch_background"
+    android:orientation="vertical"
+    tools:context=".groupmanagement.GroupSetupActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_group_setup"
+        style="@style/InTouchToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/join_or_create_a_group" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/group_setup_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_group_setup" />
+
+    <FrameLayout
+        android:id="@+id/group_setup_progress_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/transparent50"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_group_setup"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/intouch_primary_01"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

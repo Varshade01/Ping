@@ -1,0 +1,76 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "41276e903bcd0854f47d2b83f188a562",
+    "entities": [
+      {
+        "tableName": "Received_Pings",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`roomEntityId` TEXT NOT NULL, `timestamp` INTEGER, `from` TEXT NOT NULL, `receivers` TEXT NOT NULL, `message` TEXT NOT NULL, `views` TEXT NOT NULL, `groupId` TEXT, `scheduledTime` INTEGER, PRIMARY KEY(`roomEntityId`))",
+        "fields": [
+          {
+            "fieldPath": "roomEntityId",
+            "columnName": "roomEntityId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "from",
+            "columnName": "from",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "receivers",
+            "columnName": "receivers",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "message",
+            "columnName": "message",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "views",
+            "columnName": "views",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "groupId",
+            "columnName": "groupId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "scheduledTime",
+            "columnName": "scheduledTime",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "roomEntityId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '41276e903bcd0854f47d2b83f188a562')"
+    ]
+  }
+}

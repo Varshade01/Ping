@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/group_tab"
+        android:icon="@drawable/ic_group_icon"
+        android:title="@string/group"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/pings_tab"
+        android:icon="@drawable/ic_pings_icon"
+        android:title="@string/pings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/profile_tab"
+        android:icon="@drawable/ic_profile_icon"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom" />
+</menu>

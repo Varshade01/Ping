@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/intouch_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_login_intouch"
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        android:contentDescription="@string/intouch_logo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login_hello"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/tv_login_hello"
+        style="@style/InTouchHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/hello"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login_description"
+        app:layout_constraintEnd_toEndOf="@+id/til_login_email"
+        app:layout_constraintStart_toStartOf="@+id/til_login_email" />
+
+    <TextView
+        android:id="@+id/tv_login_description"
+        style="@style/InTouchMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/login_description"
+        app:layout_constraintBottom_toTopOf="@+id/til_login_email"
+        app:layout_constraintEnd_toEndOf="@+id/tv_login_hello"
+        app:layout_constraintStart_toStartOf="@+id/tv_login_hello" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_login_email"
+        style="@style/InTouchInputFieldWithBorder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_login_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_login_email"
+            style="@style/InTouchInputFieldEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/email"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_login_password"
+        style="@style/InTouchInputFieldWithBorder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/til_login_email"
+        app:layout_constraintStart_toStartOf="@+id/til_login_email"
+        app:layout_constraintTop_toBottomOf="@+id/til_login_email"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_login_password"
+            style="@style/InTouchInputFieldEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/password"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        style="@style/InTouchButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="@+id/til_login_email"
+        app:layout_constraintStart_toStartOf="@+id/til_login_email"
+        app:layout_constraintTop_toBottomOf="@+id/til_login_password" />
+
+    <Button
+        android:id="@+id/forgot_password_btn"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/forgot_password"
+        app:layout_constraintEnd_toEndOf="@+id/til_login_email"
+        app:layout_constraintStart_toStartOf="@+id/til_login_email"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+
+    <Button
+        android:id="@+id/register_new_acc_btn"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/register_new_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgot_password_btn" />
+
+    <ImageButton
+        android:id="@+id/google_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/center_vertical_guideline" />
+
+    <ImageButton
+        android:id="@+id/facebook_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_facebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/center_vertical_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

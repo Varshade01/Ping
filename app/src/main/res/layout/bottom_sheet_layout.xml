@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/design_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/intouch_primary_04"
+    android:minWidth="300dp">
+
+    <ImageView
+        android:id="@+id/iv_ping"
+        android:layout_width="44dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_ping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tw_send_ping"
+        style="@style/SendPingHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="@string/send_ping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_ping" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_from_group"
+        style="@style/InTouchInputFieldWithBorder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="@string/from_group"
+        app:endIconDrawable="@drawable/ic_arrow_down_sendping"
+        app:endIconMode="custom"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/til_receiver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_send_ping">
+
+        <com.khrd.pingapp.utils.EditedAppCompatAutoCompleteTextView
+            android:id="@+id/actvFromGroup"
+            style="@style/InTouchInputFieldEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPhonetic"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="16dp"
+            android:popupTheme="@style/ReceiversDropDown"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_receiver"
+        style="@style/InTouchInputFieldWithBorder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="@string/receiver"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/tw_send_to_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_from_group">
+
+        <com.khrd.pingapp.utils.EditedAppCompatAutoCompleteTextView
+            android:id="@+id/actvReceiver"
+            style="@style/InTouchInputFieldEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPhonetic"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="16dp"
+            android:popupTheme="@style/ReceiversDropDown"
+            tools:ignore="RtlSymmetry" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/til_receiver"
+        app:layout_constraintStart_toStartOf="@id/til_receiver"
+        app:layout_constraintTop_toTopOf="@+id/til_receiver" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:overScrollMode="never"
+        android:paddingBottom="13dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="@+id/til_receiver"
+        app:layout_constraintEnd_toEndOf="@+id/til_receiver"
+        app:layout_constraintStart_toEndOf="@id/tv_invisible"
+
+        app:layout_constraintTop_toTopOf="@id/til_receiver">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cg_receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/til_receiver"
+            app:layout_constraintEnd_toEndOf="@id/til_receiver"
+            app:layout_constraintStart_toEndOf="@id/tv_invisible"
+            app:layout_constraintTop_toTopOf="@id/til_receiver"
+            app:singleLine="true"
+            tools:ignore="RtlSymmetry" />
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tw_send_to_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingVertical="16dp"
+        android:text="@string/send_to_everyone_in_group"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_receiver" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_send_to_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:thumb="@drawable/thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/tw_send_to_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tw_send_to_group"
+        app:track="@drawable/ic_track" />
+
+    <View
+        android:id="@+id/scheduled_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/intouch_primary_03"
+        app:layout_constraintBottom_toBottomOf="@+id/tw_schedule_ping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tw_schedule_ping" />
+
+    <View
+        android:id="@+id/scheduled_background2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/intouch_primary_03"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_recursion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tw_schedule_ping" />
+
+    <TextView
+        android:id="@+id/tw_schedule_ping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingVertical="16dp"
+        android:text="@string/schedule_ping"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_send_to_group" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_schedule_ping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:thumb="@drawable/thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/tw_schedule_ping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tw_schedule_ping"
+        app:track="@drawable/ic_track" />
+
+    <com.vanniktech.emoji.EmojiEditText
+        android:id="@+id/et_emoji"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/emoji_edittext"
+        android:backgroundTint="@color/intouch_primary_04"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:enabled="false"
+        android:focusable="false"
+        android:paddingStart="16dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_add_emoji"
+        app:layout_constraintEnd_toEndOf="@+id/btn_add_emoji"
+        app:layout_constraintStart_toStartOf="@+id/btn_add_emoji"
+        app:layout_constraintTop_toTopOf="@+id/btn_add_emoji" />
+
+    <Button
+        android:id="@+id/btn_add_emoji"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/add_emoji"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_recursion" />
+
+    <Button
+        android:id="@+id/btn_clear_emoji"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_add_emoji"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_add_emoji" />
+
+    <Button
+        android:id="@+id/btn_send"
+        style="@style/InTouchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:elevation="0dp"
+        android:text="@string/send"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel"
+        app:layout_constraintTop_toTopOf="@+id/btn_cancel" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/btn_date"
+        style="@style/InTouchInputFieldWithBorder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/date"
+        android:visibility="gone"
+        app:errorTextAppearance="@style/ErrorTextAppearance"
+        app:layout_constraintEnd_toStartOf="@+id/btn_time"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tw_schedule_ping">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/InTouchInputFieldEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:maxLines="1"
+            android:paddingTop="15dp"
+            android:paddingBottom="16dp"
+            tools:text="16.09.21" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/btn_time"
+        style="@style/InTouchInputFieldWithBorder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/time"
+        android:visibility="gone"
+        app:errorTextAppearance="@style/ErrorTextAppearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/btn_date"
+        app:layout_constraintTop_toBottomOf="@+id/tw_schedule_ping">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/InTouchInputFieldEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:maxLines="1"
+            android:paddingTop="15dp"
+            android:paddingBottom="16dp"
+            tools:text="16:54" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/btn_recursion"
+        style="@style/InTouchInputFieldWithBorder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/repeat_ping"
+        app:endIconDrawable="@drawable/ic_arrow_down_sendping"
+        app:endIconMode="custom"
+        app:errorEnabled="true"
+        app:hintEnabled="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_emoji"
+        app:layout_constraintEnd_toEndOf="@+id/btn_time"
+        app:layout_constraintStart_toStartOf="@+id/btn_date"
+        app:layout_constraintTop_toBottomOf="@+id/btn_date">
+
+        <com.khrd.pingapp.utils.EditedAppCompatAutoCompleteTextView
+            android:id="@+id/actvRecursion"
+            style="@style/InTouchInputFieldEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="16dp"
+            android:inputType="textNoSuggestions"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:id="@+id/progress_fl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/transparent50"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/intouch_primary_01" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_send"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_emoji" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

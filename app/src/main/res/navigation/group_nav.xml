@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group_tab"
+    app:startDestination="@id/groupFragment">
+
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.khrd.pingapp.homescreen.fragments.GroupFragment"
+        android:label="">
+        <action
+            android:id="@+id/showBottomSheetDialog"
+            app:destination="@id/groupBottomSheetFragment">
+            <argument
+                android:name="listOfGroups"
+                app:argType="com.khrd.pingapp.data.groups.DatabaseGroup[]"
+                app:nullable="true" />
+            <argument
+                android:name="user"
+                app:argType="com.khrd.pingapp.data.users.DatabaseUser" />
+        </action>
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/groupBottomSheetFragment"
+        android:name="com.khrd.pingapp.homescreen.fragments.GroupBottomSheetFragment"
+        android:label="GroupBottomSheetFragment">
+        <argument
+            android:name="listOfGroups"
+            app:argType="com.khrd.pingapp.data.groups.DatabaseGroup[]" />
+        <argument
+            android:name="user"
+            app:argType="com.khrd.pingapp.data.users.DatabaseUser" />
+    </dialog>
+
+    <action
+        android:id="@+id/open_send_ping_dialog"
+        app:destination="@id/sendPingDialogFragment">
+        <argument
+            android:name="user"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="group"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="sentToEveryone"
+            android:defaultValue="false"
+            app:argType="boolean"
+            app:nullable="false" />
+    </action>
+</navigation>

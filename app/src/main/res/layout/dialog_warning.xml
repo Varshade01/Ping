@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/intouch_primary_04">
+
+    <ImageView
+        android:id="@+id/iv_warning_dialog_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/warning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_warning" />
+
+    <TextView
+        android:id="@+id/tv_warning_dialog_title"
+        style="@style/InTouchSuccessMessageDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_warning_dialog_warning"
+        tools:text="@string/logout" />
+
+    <TextView
+        android:id="@+id/tv_warning_dialog_message"
+        style="@style/InTouchMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_warning_dialog_title"
+        tools:text="@string/to_log_back_in" />
+
+    <Button
+        android:id="@+id/btn_warning_dialog_cancel"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_warning_dialog_confirm"
+        app:layout_constraintEnd_toStartOf="@+id/btn_warning_dialog_confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_warning_dialog_confirm" />
+
+    <Button
+        android:id="@+id/btn_warning_dialog_confirm"
+        style="@style/InTouchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_warning_dialog_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/tv_warning_dialog_message"
+        tools:ignore="DuplicateSpeakableTextCheck"
+        tools:text="@string/logout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

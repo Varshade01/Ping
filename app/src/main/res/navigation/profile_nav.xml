@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_tab"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.khrd.pingapp.homescreen.fragments.ProfileFragment"
+        android:label="ProfileFragment" />
+
+    <action
+        android:id="@+id/showZoomedUserIconDialog"
+        app:destination="@+id/ZoomedUserIconDialog">
+        <argument
+            android:name="photoURL"
+            app:argType="string" />
+    </action>
+
+    <dialog
+        android:id="@+id/ZoomedUserIconDialog"
+        android:name="com.khrd.pingapp.homescreen.fragments.ZoomedUserIconFragment"
+        android:label="UserIconZoomedDialogFragment">
+        <argument
+            android:name="photoURL"
+            app:argType="string" />
+    </dialog>
+
+</navigation>

@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion buildVersions.compile_sdk
+    buildToolsVersion buildVersions.build_tools
+    testOptions.unitTests.includeAndroidResources = true
+
+    defaultConfig {
+        minSdkVersion buildVersions.min_sdk
+        targetSdkVersion buildVersions.target_sdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation deps.core_ctx
+    implementation deps.app_compat
+    implementation deps.material
+    implementation deps.androidx_test_ext
+    testImplementation deps.junit
+    androidTestImplementation deps.navigation_fragment_ktx
+    androidTestImplementation deps.navigation_ui_ktx
+
+    //Navigation
+    implementation deps.navigation_fragment_ktx
+    implementation deps.navigation_ui_ktx
+
+    //Glide
+    implementation deps.glide.runtime
+    annotationProcessor deps.glide.compiler
+
+    //Hilt
+    implementation deps.hilt.hilt_android
+    kapt deps.hilt.hilt_compiler
+    kapt deps.hilt_lifecycle.hilt_lifecycle_compiler
+    implementation deps.hilt_lifecycle.hilt_lifecycle_viewmodel
+    implementation deps.hilt_work
+    testImplementation deps.hilt.hilt_android_testing
+    kaptTest deps.hilt.hilt_android_compiler_testing
+
+}

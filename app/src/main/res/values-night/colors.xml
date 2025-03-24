@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="scheduled_ping_background">#00303F</color>
+    <color name="background_splash_screen">#001423</color>
+    <color name="intouch_button_text">#001423</color>
+
+    <color name="intouch_accent">#E8BF0B</color>
+    <color name="intouch_accent_active">#B89600</color>
+    <color name="intouch_primary_01">#17B9EC</color>
+    <color name="intouch_primary_02">#91BBC8</color>
+    <color name="intouch_primary_03">#004054</color>
+    <color name="intouch_primary_04">#00303F</color>
+    <color name="intouch_neutral_01">#9E9F9F</color>
+    <color name="intouch_neutral_02">#2D4455</color>
+    <color name="intouch_neutral_03">#122431</color>
+    <color name="intouch_text">#FFFFFF</color>
+    <color name="intouch_background">#001423</color>
+    <color name="intouch_error">#F6442B</color>
+    <color name="intouch_date_picker_header_background">#2D4455</color>
+
+</resources>

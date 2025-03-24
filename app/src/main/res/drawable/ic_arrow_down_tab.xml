@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="10dp"
+    android:height="10dp"
+    android:viewportWidth="10"
+    android:viewportHeight="10">
+  <path
+      android:pathData="M4.9999,0C5.3923,0 5.7105,0.3181 5.7105,0.7105L5.7105,8.5263C5.7105,8.9187 5.3923,9.2369 4.9999,9.2369C4.6075,9.2369 4.2894,8.9187 4.2894,8.5263L4.2894,0.7105C4.2894,0.3181 4.6075,0 4.9999,0Z"
+      android:fillColor="@color/intouch_button_text"
+      android:fillType="evenOdd" />
+  <path
+      android:pathData="M9.3242,4.7427C9.5826,5.038 9.5527,5.4869 9.2573,5.7453L5.4679,9.0611C5.1725,9.3195 4.7237,9.2895 4.4653,8.9942C4.2069,8.6989 4.2368,8.25 4.5321,7.9916L8.3216,4.6758C8.6169,4.4174 9.0658,4.4473 9.3242,4.7427Z"
+      android:fillColor="@color/intouch_button_text"
+      android:fillType="evenOdd" />
+  <path
+      android:pathData="M0.6758,4.7427C0.4174,5.038 0.4473,5.4869 0.7427,5.7453L4.5321,9.0611C4.8275,9.3195 5.2763,9.2895 5.5347,8.9942C5.7931,8.6989 5.7632,8.25 5.4679,7.9916L1.6784,4.6758C1.3831,4.4174 0.9342,4.4473 0.6758,4.7427Z"
+      android:fillColor="@color/intouch_button_text"
+      android:fillType="evenOdd" />
+</vector>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#EAEAEA</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="transparent50">#50FFFFFF</color>
+    <color name="transparent80">#80FFFFFF</color>
+    <color name="black_light">#00ffffff</color>
+    <color name="scheduled_ping_background">#FFFFFF</color>
+    <color name="background_splash_screen">#FFFFFF</color>
+    <color name="intouch_button_text">#001423</color><!--APPLY FOR YELLOW BUTTONS-->
+
+    <color name="intouch_accent">#FACD08</color>
+    <color name="intouch_accent_active">#DAB308</color>
+    <color name="intouch_primary_01">#027DA4</color>
+    <color name="intouch_primary_02">#306474</color>
+    <color name="intouch_primary_03">#F2FAFF</color>
+    <color name="intouch_primary_04">#FDFEFF</color>
+    <color name="intouch_neutral_01">#5A767E</color>
+    <color name="intouch_neutral_02">#C9D3D7</color>
+    <color name="intouch_neutral_03">#F1F4F5</color>
+    <color name="intouch_text">#001423</color>
+    <color name="intouch_background">#FFFFFF</color>
+    <color name="intouch_error">#CA4D31</color>
+    <color name="intouch_date_picker_header_background">#306474</color>
+
+</resources>

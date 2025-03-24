@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "530284723960",
+    "firebase_url": "https://pingapp-853cc-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pingapp-853cc",
+    "storage_bucket": "pingapp-853cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530284723960:android:0733a14ccbab7c0005450d",
+        "android_client_info": {
+          "package_name": "com.khrd.pingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530284723960-02ihkpqgk0maljvjetj6oau0sarr5mrb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.khrd.pingapp",
+            "certificate_hash": "82aa8eb14b0010671d043a382c130f4f98ba1ddc"
+          }
+        },
+        {
+          "client_id": "530284723960-avv012edj7umric7qs46l19ov354ssc4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.khrd.pingapp",
+            "certificate_hash": "80ad88bfa69a337ae7c129d64f46cf385285f70a"
+          }
+        },
+        {
+          "client_id": "530284723960-dg0qi0mi805tbvmr34rc73dtlkf4mahs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.khrd.pingapp",
+            "certificate_hash": "b02e7c2e0b4c86c30256b30633775de1bd4b9c13"
+          }
+        },
+        {
+          "client_id": "530284723960-t2q47jpen073dsfalosbmujblfdm3qkq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.khrd.pingapp",
+            "certificate_hash": "44dea6bf7987fd1b1ed03f3b5a7b2b799c8af6e6"
+          }
+        },
+        {
+          "client_id": "530284723960-ufip0asg2fpraqpvvai1376b11qjpsom.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.khrd.pingapp",
+            "certificate_hash": "8fa35c4c3649a396d7193b7d3e75182886842a79"
+          }
+        },
+        {
+          "client_id": "530284723960-qnkjuu4j7if7mj9gidd8nl504dms1slb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Din9gzM4lUnxNlt87tciWuaibEWX5bM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530284723960-qnkjuu4j7if7mj9gidd8nl504dms1slb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "530284723960-10gpnvq3r04v4f9j462v6vrf5gfldbsf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.epamsystems.InTouch"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

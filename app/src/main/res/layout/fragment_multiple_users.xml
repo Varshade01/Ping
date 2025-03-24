@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/intouch_primary_04"
+    android:minWidth="328dp">
+
+    <io.getstream.avatarview.AvatarView
+        android:id="@+id/conversation_ic"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="18dp"
+        app:avatarViewBorderWidth="0dp"
+        app:avatarViewMaxSectionSize="four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_default_user_avatar" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_conversation_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conversation_ic">
+
+        <TextView
+            android:id="@+id/conversationUsers_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textSize="16sp"
+            app:fontFamily="@font/poppins_semibold"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="list of conversations users" />
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/sendPingButton"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_send_ping_icon"
+        android:text="@string/send_ping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll_conversation_item" />
+
+    <ImageView
+        android:id="@+id/gradient_shape"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/gradient_list_of_receivers"
+        android:contentDescription="@string/gradient_shape"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontal_scroll_conversation_item"
+        app:layout_constraintEnd_toEndOf="@+id/horizontal_scroll_conversation_item"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_scroll_conversation_item"
+        app:layout_constraintVertical_bias="0.0">
+
+    </ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

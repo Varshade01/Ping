@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/create_group_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/create_new_group_header"
+        style="@style/GroupSettingsItemHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/create_group_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/create_new_group_message"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_group_header" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/group_name_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/create_group_hint"
+        style="@style/InTouchInputFieldWithoutBorder"
+        app:layout_constraintEnd_toStartOf="@+id/create_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_group_message">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InTouchInputFieldEditTextBorderless"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/copy_link_button"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copy_link"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/group_name_input_layout" />
+
+    <TextView
+        android:id="@+id/link_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/intouch_primary_01"
+        android:fontFamily="@font/poppins_semibold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/copy_link_button"
+        app:layout_constraintEnd_toStartOf="@+id/copy_link_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/copy_link_button"
+        tools:text="https://khrd.page.link/8a91sd0821w80a0d" />
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/InTouchButton"
+        android:text="@string/done"
+        android:visibility="gone"
+        android:layout_marginTop="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copy_link_button" />
+
+    <Button
+        android:id="@+id/create_button"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="@+id/group_name_input_layout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

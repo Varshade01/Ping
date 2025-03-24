@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pings_tab"
+    app:startDestination="@id/pingFragment">
+
+    <fragment
+        android:id="@+id/pingFragment"
+        android:name="com.khrd.pingapp.homescreen.fragments.intouch.PingsFragment"
+        android:label="PingFragment" />
+
+    <fragment
+        android:id="@+id/sentPingsFragment"
+        android:name="com.khrd.pingapp.homescreen.fragments.intouch.viewpager.sent.SentPingsFragment"
+        android:label="SentPingsFragment" />
+
+    <dialog
+        android:id="@+id/pingStatusDialogFragment"
+        android:name="com.khrd.pingapp.homescreen.fragments.intouch.viewpager.sent.pingstatus.PingStatusDialogFragment"
+        android:label="PingStatusDialogFragment">
+        <argument
+            android:name="sentPingItem"
+            app:argType="com.khrd.pingapp.homescreen.fragments.intouch.viewpager.adapter.SentPingItem" />
+    </dialog>
+
+    <action
+        android:id="@+id/showPingStatusDialog"
+        app:destination="@id/pingStatusDialogFragment">
+        <argument
+            android:name="sentPingItem"
+            app:argType="com.khrd.pingapp.homescreen.fragments.intouch.viewpager.adapter.SentPingItem" />
+    </action>
+
+    <dialog
+        android:id="@+id/groupStatusDialogFragment"
+        android:name="com.khrd.pingapp.homescreen.fragments.GroupStatusDialogFragment">
+        <argument
+            android:name="dataBaseGroup"
+            app:argType="com.khrd.pingapp.data.groups.DatabaseGroup"
+            app:nullable="false" />
+        <argument
+            android:name="dataBaseUser"
+            app:argType="com.khrd.pingapp.data.users.DatabaseUser"
+            app:nullable="false" />
+
+    </dialog>
+
+    <action
+        android:id="@+id/showGroupUsersStatusDialog"
+        app:destination="@id/groupStatusDialogFragment">
+        <argument
+            android:name="dataBaseGroup"
+            app:argType="com.khrd.pingapp.data.groups.DatabaseGroup"
+            app:nullable="false" />
+        <argument
+            android:name="dataBaseUser"
+            app:argType="com.khrd.pingapp.data.users.DatabaseUser"
+            app:nullable="false" />
+    </action>
+
+    <dialog
+        android:id="@+id/multipleUsersDialogFragment"
+        android:name="com.khrd.pingapp.homescreen.fragments.MultipleUsersDialogFragment"
+        android:label="MultipleUsersDialogFragment">
+        <argument
+            android:name="group"
+            app:argType="com.khrd.pingapp.data.groups.DatabaseGroup"
+            app:nullable="true" />
+        <argument
+            android:name="users"
+            app:argType="com.khrd.pingapp.homescreen.adapter.UserItem[]"
+            app:nullable="false" />
+
+    </dialog>
+    <action
+        android:id="@+id/show_multipleUsersDialogFragment"
+        app:destination="@id/multipleUsersDialogFragment">
+        <argument
+            android:name="group"
+            app:argType="com.khrd.pingapp.data.groups.DatabaseGroup"
+            app:nullable="true" />
+        <argument
+            android:name="users"
+            app:argType="com.khrd.pingapp.homescreen.adapter.UserItem[]"
+            app:nullable="false" />
+    </action>
+</navigation>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/intouch_primary_04"
+    android:minWidth="328dp"
+    android:minHeight="456dp">
+
+    <TextView
+        android:id="@+id/tv_sent_to_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/sent_to"
+        android:textColor="@color/intouch_text"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sent_to_receiver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins"
+        android:maxLines="1"
+        android:textColor="@color/intouch_text"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_sent_to_header"
+        app:layout_constraintEnd_toStartOf="@+id/tv_ping_emoji"
+        app:layout_constraintStart_toEndOf="@+id/tv_sent_to_header"
+        tools:text="Super Awesome people" />
+
+    <TextView
+        android:id="@+id/tv_ping_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11.5dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/intouch_text"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_ping_emoji"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sent_to_header"
+        tools:text="30 June, 15:00" />
+
+    <TextView
+        android:id="@+id/tv_ping_emoji"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_ping_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_ping_date"
+        tools:text="😀" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/members_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="23.5dp"
+        android:layout_marginBottom="19dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ping_date"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/InTouchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="19dp"
+        android:paddingHorizontal="37dp"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

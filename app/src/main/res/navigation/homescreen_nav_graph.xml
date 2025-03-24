@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homescreen_nav_graph"
+    app:startDestination="@id/group_tab">
+
+    <include app:graph="@navigation/group_nav" />
+    <include app:graph="@navigation/pings_nav" />
+    <include app:graph="@navigation/profile_nav" />
+
+    <dialog
+        android:id="@+id/sendPingDialogFragment"
+        android:name="com.khrd.pingapp.homescreen.sendping.SendPingDialogFragment"
+        android:label="SendPingDialogFragment">
+        <argument
+            android:name="users"
+            android:defaultValue="@null"
+            app:argType="string[]"
+            app:nullable="true" />
+        <argument
+            android:name="group"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="sentToEveryone"
+            android:defaultValue="false"
+            app:argType="boolean"
+            app:nullable="false" />
+    </dialog>
+
+    <action
+        android:id="@+id/open_send_ping_dialog"
+        app:destination="@id/sendPingDialogFragment">
+        <argument
+            android:name="users"
+            android:defaultValue="@null"
+            app:argType="string[]"
+            app:nullable="true" />
+        <argument
+            android:name="group"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="sentToEveryone"
+            android:defaultValue="false"
+            app:argType="boolean"
+            app:nullable="false" />
+    </action>
+    <action
+        android:id="@+id/showUserStatusDialog"
+        app:destination="@id/userStatusDialogFragment">
+        <argument
+            android:name="userItem"
+            app:argType="com.khrd.pingapp.homescreen.adapter.UserItem" />
+        <argument
+            android:name="dataBaseGroup"
+            android:defaultValue="@null"
+            app:argType="com.khrd.pingapp.data.groups.DatabaseGroup"
+            app:nullable="true" />
+    </action>
+
+    <dialog
+        android:id="@+id/userStatusDialogFragment"
+        android:name="com.khrd.pingapp.homescreen.fragments.UserStatusDialogFragment"
+        android:label="UserStatusDialogFragment">
+        <argument
+            android:name="userItem"
+            app:argType="com.khrd.pingapp.homescreen.adapter.UserItem" />
+        <argument
+            android:name="dataBaseGroup"
+            android:defaultValue="@null"
+            app:argType="com.khrd.pingapp.data.groups.DatabaseGroup"
+            app:nullable="true" />
+    </dialog>
+
+    <action
+        android:id="@+id/showZoomedUserIconDialog"
+        app:destination="@+id/ZoomedUserIconDialog">
+        <argument
+            android:name="photoURL"
+            app:argType="string" />
+    </action>
+
+    <dialog
+        android:id="@+id/ZoomedUserIconDialog"
+        android:name="com.khrd.pingapp.homescreen.fragments.ZoomedUserIconFragment"
+        android:label="UserIconZoomedDialogFragment">
+        <argument
+            android:name="photoURL"
+            app:argType="string" />
+    </dialog>
+</navigation>

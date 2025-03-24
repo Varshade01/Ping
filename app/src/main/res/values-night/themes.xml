@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PingApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/intouch_primary_01</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <!--InTouch colors-->
+        <item name="android:textColor">@color/intouch_text</item>
+        <item name="colorError">@color/intouch_error</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="Theme.NoActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/intouch_text</item>
+        <item name="colorError">@color/intouch_error</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/intouch_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.Toolbar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/intouch_text</item>
+        <item name="colorError">@color/intouch_error</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/intouch_neutral_03</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="actionMenuTextColor">@color/intouch_primary_01</item>
+        <item name="actionMenuTextAppearance">@style/InTouchToolbarHeader.MenuTextAppearance</item>
+        <item name="android:actionBarItemBackground">@drawable/transparent_button_ripple_effect</item>
+        <item name ="searchViewStyle">@style/AppTheme.SearchView</item>
+    </style>
+</resources>

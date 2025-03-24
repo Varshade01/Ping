@@ -1,0 +1,5 @@
+package com.khrd.pingapp.homescreen.states
+
+sealed interface DeleteProfilePhotoState
+object DeleteProfilePhotoStateSuccess : DeleteProfilePhotoState
+object DeleteProfilePhotoStateFail : DeleteProfilePhotoState

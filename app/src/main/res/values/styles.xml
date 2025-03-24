@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="InTouchHello" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/intouch_primary_01</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="InTouchButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/intouch_button_text</item>
+        <item name="android:backgroundTint">@color/button_background_state_color_selector</item>
+        <item name="rippleColor">@color/intouch_accent_active</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingVertical">@dimen/yellow_button_vertical_padding</item>
+    </style>
+
+    <style name="InTouchTransparentButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/intouch_primary_01</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:background">@drawable/transparent_button_ripple_effect</item>
+    </style>
+
+    <style name="InTouchInputFieldWithBorder" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="helperTextTextAppearance">@style/HelperTextAppearance</item>
+        <item name="helperTextTextColor">@color/intouch_neutral_01</item>
+        <item name="hintTextAppearance">@style/HintTextAppearance</item>
+        <item name="hintTextColor">@color/intouch_neutral_01</item>
+        <item name="android:textColorHint">@color/intouch_neutral_01</item>
+        <item name="placeholderTextColor">@color/intouch_text</item>
+        <item name="passwordToggleTint">@color/intouch_neutral_02</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorEnabled">true</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxCornerRadiusBottomEnd">4dp</item>
+        <item name="boxCornerRadiusBottomStart">4dp</item>
+        <item name="boxCornerRadiusTopEnd">4dp</item>
+        <item name="boxCornerRadiusTopStart">4dp</item>
+        <item name="boxStrokeColor">@color/intouch_primary_01</item>
+        <item name="errorTextColor">@color/intouch_error</item>
+        <item name="boxStrokeErrorColor">@color/intouch_error</item>
+    </style>
+
+    <style name="InTouchInputFieldWithoutBorder" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="helperTextTextAppearance">@style/HelperTextAppearance</item>
+        <item name="helperTextTextColor">@color/intouch_neutral_01</item>
+        <item name="hintTextAppearance">@style/HintTextAppearance</item>
+        <item name="hintTextColor">@color/intouch_neutral_01</item>
+        <item name="android:textColorHint">@color/intouch_neutral_01</item>
+        <item name="placeholderTextColor">@color/intouch_text</item>
+        <item name="passwordToggleTint">@color/intouch_neutral_02</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorEnabled">true</item>
+        <item name="boxStrokeColor">@color/input_field_state_color_selector</item>
+        <item name="errorTextColor">@color/intouch_error</item>
+        <item name="boxStrokeErrorColor">@color/intouch_error</item>
+    </style>
+
+    <style name="InTouchPasswordInputField" parent="InTouchInputFieldWithBorder">
+        <item name="passwordToggleDrawable">@drawable/ic_password_visibility</item>
+        <item name="passwordToggleEnabled">true</item>
+    </style>
+
+    <style name="InTouchInputFieldEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">12sp</item>
+        <item name="backgroundTint">@color/intouch_background</item>
+        <item name="android:textColor">@color/edittext_state_color_selector</item>
+    </style>
+
+    <style name="InTouchInputFieldEditTextBorderless" parent="Widget.AppCompat.EditText">
+        <item name="android:gravity">bottom</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingTop">30dp</item>
+        <item name="backgroundTint">@color/intouch_background</item>
+        <item name="android:textColor">@color/edittext_state_color_selector</item>
+    </style>
+
+    <style name="InTouchMessage" parent="Widget.AppCompat.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/intouch_text</item>
+    </style>
+
+    <!-- Hint, Helper, Error Appearances -->
+    <style name="HelperTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/intouch_neutral_01</item>
+        <item name="android:textSize">@dimen/error_text_size</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="HintTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/intouch_neutral_01</item>
+        <item name="android:textSize">@dimen/error_text_size</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="ErrorTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/error_text_size</item>
+        <item name="android:textColor">@color/intouch_error</item>
+        <item name="android:gravity">start</item>
+    </style>
+    <!--========================-->
+
+    <!-- Toolbar ===============-->
+    <style name="InTouchToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="elevation">0dp</item>
+        <item name="background">@color/intouch_background</item>
+        <item name="navigationIcon">@drawable/ic_arrow_back</item>
+        <item name="navigationIconTint">@color/intouch_primary_01</item>
+        <item name="titleTextColor">@color/intouch_primary_01</item>
+        <item name="titleTextAppearance">@style/InTouchToolbar.TitleAppearance</item>
+    </style>
+
+    <style name="InTouchToolbar.TitleAppearance" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">22sp</item>
+        <item name="autoSizeMinTextSize">16sp</item>
+    </style>
+
+    <style name="InTouchToolbarHeader" parent="Widget.MaterialComponents.Toolbar">
+        <item name="elevation">0dp</item>
+        <item name="android:background">@color/intouch_neutral_03</item>
+        <item name="titleTextColor">@color/intouch_primary_02</item>
+        <item name="collapseIcon">@drawable/ic_arrow_back_design</item>
+        <item name="colorOnPrimary">@color/intouch_primary_01</item>
+        <item name="titleTextAppearance">@style/InTouchToolbarHeader.TitleAppearance</item>
+    </style>
+
+    <!--    Group SearchView Style-->
+    <style name="AppTheme.SearchView" parent="Widget.AppCompat.SearchView.ActionBar">
+        <item name="closeIcon">@drawable/ic_chip_close</item>
+        <item name="android:maxWidth">500dp</item>
+        <item name="queryBackground">@drawable/search_view_underline_selector</item>
+        <item name="android:background">@color/intouch_neutral_03</item>
+        <item name="queryHint">@string/searchView_hint</item>
+    </style>
+
+    <style name="InTouchToolbarHeader.TitleAppearance" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="InTouchToolbarHeader.MenuTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="textAllCaps">true</item>
+    </style>
+    <!--========================-->
+
+    <!-- Dialogs ===============-->
+    <style name="InTouchSuccessMessageDialogTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/intouch_text</item>
+    </style>
+    <!--========================-->
+    <style name="GroupSettingsItemHeader" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+    <!--========================-->
+    <style name="AttentionHeader" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--========================-->
+    <style name="SendPingHeader" parent="Widget.AppCompat.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">22sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <!-- TabLayout =============-->
+    <style name="InTouchPingsTabs" parent="Widget.MaterialComponents.TabLayout">
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="tabIndicatorColor">@color/intouch_accent</item>
+        <item name="tabIndicatorHeight">4dp</item>
+        <item name="tabTextColor">@color/intouch_text</item>
+    </style>
+
+    <style name="InTouchPingsTabs.SelectedTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="InTouchPingsTabs.UnselectedTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="ReceiversDropDown">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:backgroundTint">@color/intouch_primary_04</item>
+    </style>
+    <!--========================-->
+
+    <!-- Bottom Navigation =====-->
+    <style name="InTouchBottomNavigationTextAppearance">
+        <item name="fontFamily">@font/poppins_semibold</item>
+    </style>
+    <!--========================-->
+
+    <!--===Bottom Sheet Style===-->
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background</item>
+        <item name="behavior_peekHeight">250dp</item>
+    </style>
+
+    <!--MATERIAl DATEPICKER-->
+
+    <!--Header Title-->
+    <style name="HeaderTitle" parent="Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Header panel -->
+    <style name="HeaderPanel" parent="Widget.MaterialComponents.MaterialCalendar.HeaderLayout">
+        <item name="android:background">@color/intouch_date_picker_header_background</item>
+    </style>
+
+    <!-- Header selected date -->
+    <style name="HeaderSelectedDate" parent="Widget.MaterialComponents.MaterialCalendar.HeaderSelection">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--Switch-to-keyboard input icon-->
+    <style name="SwitchToKeyboardInputIcon" parent="Widget.MaterialComponents.MaterialCalendar.HeaderTitle">
+        <item name="android:background">@color/intouch_date_picker_header_background</item>
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <!--Year selection menu-->
+    <style name="YearSelectionMenu" parent="Widget.MaterialComponents.MaterialCalendar.YearNavigationButton">
+        <item name="android:textColor">@color/intouch_neutral_01</item>
+        <item name="iconTint">@color/intouch_neutral_01</item>
+    </style>
+
+    <!--Month pagination-->
+    <style name="MonthPagination" parent="Widget.MaterialComponents.MaterialCalendar.MonthNavigationButton">
+        <item name="android:textColor">@color/intouch_neutral_01</item>
+        <item name="iconTint">@color/intouch_neutral_01</item>
+    </style>
+
+    <!--Day of week-->
+    <style name="DatePickerThemeDarkOverlay" parent="">
+        <item name="android:textColor">@color/intouch_neutral_01</item>
+    </style>
+
+    <!--Past day-->
+    <style name="Widget.MaterialComponents.MaterialCalendar.Day.Invalid">
+        <item name="itemTextColor">@color/intouch_neutral_01</item>
+    </style>
+
+    <!--Current date-->
+    <style name="Widget.MaterialComponents.MaterialCalendar.Day.Today">
+        <item name="itemStrokeColor">@color/intouch_neutral_01</item>
+    </style>
+
+    <!--Day style-->
+    <style name="Widget.MaterialComponents.MaterialCalendar.Item">
+        <item name="itemFillColor">@android:color/transparent</item>
+        <item name="itemTextColor">@color/intouch_text</item>
+        <item name="itemStrokeColor">@color/mtrl_calendar_item_stroke_color</item>
+        <item name="itemStrokeWidth">1dp</item>
+        <item name="itemShapeAppearance">?attr/shapeAppearanceSmallComponent</item>
+    </style>
+
+    <!-- Day selected -->
+    <style name="Widget.MaterialComponents.MaterialCalendar.Day.Selected">
+        <item name="itemFillColor">@color/intouch_primary_01</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="itemStrokeWidth">0dp</item>
+    </style>
+    <!--========================-->
+
+</resources>
+

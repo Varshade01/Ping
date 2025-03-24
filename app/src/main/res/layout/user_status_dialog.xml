@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/intouch_primary_04"
+    android:minWidth="328dp">
+
+    <ImageView
+        android:id="@+id/userItemImage"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/userItemIsOnline"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_online"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/userItemImage"
+        app:layout_constraintEnd_toEndOf="@+id/userItemImage" />
+
+    <TextView
+        android:id="@+id/userItemFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/intouch_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userItemImage" />
+
+    <TextView
+        android:id="@+id/userItemJobPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/intouch_text"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userItemFullName" />
+
+    <TextView
+        android:id="@+id/userItemLastSeen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/intouch_primary_02"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userItemJobPosition" />
+
+
+    <TextView
+        android:id="@+id/commonGroups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/common_groups"
+        android:textColor="@color/intouch_primary_02"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userItemLastSeen" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userItemDialogRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commonGroups" />
+
+    <Button
+        android:id="@+id/muteUserButton"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_muteusericon"
+        android:text="@string/mute_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userItemDialogRecyclerView" />
+
+
+    <Button
+        android:id="@+id/sendPingButton"
+        style="@style/InTouchTransparentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_send_ping_icon"
+        android:text="@string/send_ping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/muteUserButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

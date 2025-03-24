@@ -1,0 +1,3 @@
+rootProject.name = "PingApp"
+include ':app'
+include ':Utils'

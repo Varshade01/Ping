@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_width">156dp</dimen>
+    <dimen name="logo_height">40dp</dimen>
+    <dimen name="logo_margin_top">27dp</dimen>
+    <dimen name="hello_text_size">22sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="registration_horizontal_margin">32dp</dimen>
+    <dimen name="input_fields_middle_margin">10dp</dimen>
+    <dimen name="bottom_button_margin">8dp</dimen>
+    <dimen name="yellow_button_vertical_padding">9dp</dimen>
+    <dimen name="error_text_size">10sp</dimen>
+    <dimen name="chip_close_icon_size">12dp</dimen>
+    <dimen name="search_view_action_bar_height">60dp</dimen>
+    <dimen name="small_10sp">10sp</dimen>
+</resources>
